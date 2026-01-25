@@ -33,6 +33,8 @@ class FakeLoginUseCase extends BaseFutureUseCase<FakeLoginInput, FakeLoginOutput
 
 @freezed
 class FakeLoginInput extends BaseInput with _$FakeLoginInput {
+  const FakeLoginInput._();
+
   const factory FakeLoginInput() = _FakeLoginInput;
 }
 

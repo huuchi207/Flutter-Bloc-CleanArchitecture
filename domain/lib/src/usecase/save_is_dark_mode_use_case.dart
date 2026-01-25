@@ -22,6 +22,8 @@ class SaveIsDarkModeUseCase extends BaseFutureUseCase<SaveIsDarkModeInput, SaveI
 
 @freezed
 class SaveIsDarkModeInput extends BaseInput with _$SaveIsDarkModeInput {
+  const SaveIsDarkModeInput._();
+
   const factory SaveIsDarkModeInput({
     required bool isDarkMode,
   }) = _SaveIsDarkModeInput;

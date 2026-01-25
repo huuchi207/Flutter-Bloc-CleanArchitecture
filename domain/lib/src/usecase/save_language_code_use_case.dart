@@ -22,10 +22,12 @@ class SaveLanguageCodeUseCase
 }
 
 @freezed
-class SaveLanguageCodeInput extends BaseInput with _$SaveLanguageCodeInput {
+class SaveLanguageCodeInput with _$SaveLanguageCodeInput implements BaseInput {
+  const SaveLanguageCodeInput._();
+
   const factory SaveLanguageCodeInput({
     required LanguageCode languageCode,
-  }) = _SaveLanguageCodeUseCase;
+  }) = _SaveLanguageCodeInput;
 }
 
 @freezed

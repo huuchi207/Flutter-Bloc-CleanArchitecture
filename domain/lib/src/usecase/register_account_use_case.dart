@@ -28,6 +28,8 @@ class RegisterAccountUseCase
 
 @freezed
 class RegisterAccountInput extends BaseInput with _$RegisterAccountInput {
+  const RegisterAccountInput._();
+
   const factory RegisterAccountInput({
     required String username,
     required String email,

@@ -1,16 +1,19 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:domain/domain.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../app.dart';
 
+part 'app_router.gr.dart';
+
 // ignore_for_file:prefer-single-widget-per-file
 @AutoRouterConfig(
   replaceInRouteName: 'Page,Route',
 )
 @LazySingleton()
-class AppRouter extends $AppRouter {
+class AppRouter extends RootStackRouter {
   @override
   RouteType get defaultRouteType => const RouteType.adaptive();
 

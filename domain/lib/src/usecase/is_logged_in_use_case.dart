@@ -20,6 +20,8 @@ class IsLoggedInUseCase extends BaseSyncUseCase<IsLoggedInInput, IsLoggedInOutpu
 
 @freezed
 class IsLoggedInInput extends BaseInput with _$IsLoggedInInput {
+  const IsLoggedInInput._();
+
   const factory IsLoggedInInput() = _IsLoggedInInput;
 }
 

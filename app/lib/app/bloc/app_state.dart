@@ -7,6 +7,7 @@ part 'app_state.freezed.dart';
 
 @freezed
 class AppState extends BaseBlocState with _$AppState {
+  const AppState._();
   const factory AppState({
     @Default(LanguageCode.ja) LanguageCode languageCode,
     @Default(false) bool isLoggedIn,

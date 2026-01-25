@@ -41,6 +41,9 @@ class ResetPasswordUseCase extends BaseFutureUseCase<ResetPasswordInput, ResetPa
 
 @freezed
 class ResetPasswordInput extends BaseInput with _$ResetPasswordInput {
+
+  const ResetPasswordInput._();
+
   const factory ResetPasswordInput({
     required String token,
     required String email,

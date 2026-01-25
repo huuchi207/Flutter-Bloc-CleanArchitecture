@@ -11,6 +11,7 @@ abstract class CommonEvent extends BaseBlocEvent {
 
 @freezed
 class ExceptionEmitted extends CommonEvent with _$ExceptionEmitted {
+  const ExceptionEmitted._();
   const factory ExceptionEmitted({
     required AppExceptionWrapper appExceptionWrapper,
   }) = _ExceptionEmitted;
@@ -18,6 +19,7 @@ class ExceptionEmitted extends CommonEvent with _$ExceptionEmitted {
 
 @freezed
 class LoadingVisibilityEmitted extends CommonEvent with _$LoadingVisibilityEmitted {
+  const LoadingVisibilityEmitted._();
   const factory LoadingVisibilityEmitted({
     required bool isLoading,
   }) = _LoadingVisibilityEmitted;
@@ -25,5 +27,6 @@ class LoadingVisibilityEmitted extends CommonEvent with _$LoadingVisibilityEmitt
 
 @freezed
 class ForceLogoutButtonPressed extends CommonEvent with _$ForceLogoutButtonPressed {
+  const ForceLogoutButtonPressed._();
   const factory ForceLogoutButtonPressed() = _ForceLogoutButtonPressed;
 }

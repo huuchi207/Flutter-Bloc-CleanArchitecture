@@ -2,7 +2,7 @@ import UIKit
 import Flutter
 // import os.log
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
   override func application(
     _ application: UIApplication,
@@ -25,4 +25,7 @@ import Flutter
     
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
+    func open(_ url: URL, options: [OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {
+        
+    }
 }

@@ -10,6 +10,7 @@ abstract class LoginEvent extends BaseBlocEvent {
 
 @freezed
 class EmailTextFieldChanged extends LoginEvent with _$EmailTextFieldChanged {
+  const EmailTextFieldChanged._();
   const factory EmailTextFieldChanged({
     required String email,
   }) = _EmailTextFieldChanged;
@@ -17,6 +18,7 @@ class EmailTextFieldChanged extends LoginEvent with _$EmailTextFieldChanged {
 
 @freezed
 class PasswordTextFieldChanged extends LoginEvent with _$PasswordTextFieldChanged {
+  const PasswordTextFieldChanged._();
   const factory PasswordTextFieldChanged({
     required String password,
   }) = _PasswordTextFieldChanged;
@@ -24,15 +26,18 @@ class PasswordTextFieldChanged extends LoginEvent with _$PasswordTextFieldChange
 
 @freezed
 class EyeIconPressed extends LoginEvent with _$EyeIconPressed {
+  const EyeIconPressed._();
   const factory EyeIconPressed() = _EyeIconPressed;
 }
 
 @freezed
 class LoginButtonPressed extends LoginEvent with _$LoginButtonPressed {
+  const LoginButtonPressed._();
   const factory LoginButtonPressed() = _LoginButtonPressed;
 }
 
 @freezed
 class FakeLoginButtonPressed extends LoginEvent with _$FakeLoginButtonPressed {
+  const FakeLoginButtonPressed._();
   const factory FakeLoginButtonPressed() = _FakeLoginButtonPressed;
 }

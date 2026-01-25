@@ -24,5 +24,7 @@ class GetUsersUseCase extends BaseLoadMoreUseCase<GetUsersInput, User> {
 
 @freezed
 class GetUsersInput extends BaseInput with _$GetUsersInput {
+  const GetUsersInput._();
+
   const factory GetUsersInput() = _GetUsersInput;
 }

@@ -4,12 +4,12 @@ version: 0.0.1
 publish_to: none
 
 environment:
-  sdk: ">=3.0.5 <4.0.0"
+  sdk: '>=3.8.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependency_overrides:
-  analyzer: 6.2.0
-  dart_style: 2.3.6
+  analyzer: 8.1.1
+  dart_style: 3.1.2
 
 dependencies:
   flutter:
@@ -19,8 +19,8 @@ dev_dependencies:
   # flutter_lints: 1.0.4
   flutter_test:
     sdk: flutter
-  intl: 0.19.0
-  intl_utils: 2.8.7
+  intl: 0.20.2
+  intl_utils: 2.8.13
 
 flutter_intl:
   enabled: true

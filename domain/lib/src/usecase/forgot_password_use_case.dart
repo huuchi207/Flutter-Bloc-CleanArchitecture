@@ -29,6 +29,8 @@ class ForgotPasswordUseCase extends BaseFutureUseCase<ForgotPasswordInput, Forgo
 
 @freezed
 class ForgotPasswordInput extends BaseInput with _$ForgotPasswordInput {
+  const ForgotPasswordInput._();
+
   const factory ForgotPasswordInput({
     required String email,
   }) = _ForgotPasswordInput;

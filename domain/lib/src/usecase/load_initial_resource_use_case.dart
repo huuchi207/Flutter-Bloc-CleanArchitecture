@@ -23,6 +23,8 @@ class LoadInitialResourceUseCase
 
 @freezed
 class LoadInitialResourceInput extends BaseInput with _$LoadInitialResourceInput {
+  const LoadInitialResourceInput._();
+
   const factory LoadInitialResourceInput() = _LoadInitialResourceInput;
 }
 

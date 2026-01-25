@@ -25,6 +25,7 @@ class ClearCurrentUserDataUseCase
 
 @freezed
 class ClearCurrentUserDataInput extends BaseInput with _$ClearCurrentUserDataInput {
+  ClearCurrentUserDataInput._();
   const factory ClearCurrentUserDataInput() = _ClearCurrentUserDataInput;
 }
 

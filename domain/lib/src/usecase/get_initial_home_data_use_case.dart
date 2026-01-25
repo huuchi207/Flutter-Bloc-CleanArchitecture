@@ -27,6 +27,8 @@ class GetInitialHomeDataUseCase
 
 @freezed
 class GetInitialHomeDataInput extends BaseInput with _$GetInitialHomeDataInput {
+  const GetInitialHomeDataInput._();
+
   const factory GetInitialHomeDataInput() = _GetInitialHomeDataInput;
 }
 

@@ -25,6 +25,8 @@ class GetInitialAppDataUseCase
 
 @freezed
 class GetInitialAppDataInput extends BaseInput with _$GetInitialAppDataInput {
+  const GetInitialAppDataInput._();
+
   const factory GetInitialAppDataInput() = _GetInitialAppDataInput;
 }
 

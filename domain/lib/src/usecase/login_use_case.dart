@@ -31,6 +31,8 @@ class LoginUseCase extends BaseFutureUseCase<LoginInput, LoginOutput> {
 
 @freezed
 class LoginInput extends BaseInput with _$LoginInput {
+  const LoginInput._();
+
   const factory LoginInput({
     required String email,
     required String password,

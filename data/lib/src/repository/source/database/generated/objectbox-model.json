@@ -51,9 +51,9 @@
         {
           "id": "2:1208531693273940929",
           "name": "avatarId",
+          "indexId": "1:4801478670005000227",
           "type": 11,
           "flags": 520,
-          "indexId": "1:4801478670005000227",
           "relationTarget": "LocalImageUrlData"
         },
         {
