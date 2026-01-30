@@ -22,7 +22,7 @@ class SaveLanguageCodeUseCase
 }
 
 @freezed
-class SaveLanguageCodeInput with _$SaveLanguageCodeInput implements BaseInput {
+abstract class SaveLanguageCodeInput with _$SaveLanguageCodeInput implements BaseInput {
   const SaveLanguageCodeInput._();
 
   const factory SaveLanguageCodeInput({

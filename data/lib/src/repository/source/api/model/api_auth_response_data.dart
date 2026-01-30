@@ -4,7 +4,7 @@ part 'api_auth_response_data.freezed.dart';
 part 'api_auth_response_data.g.dart';
 
 @freezed
-class ApiAuthResponseData with _$ApiAuthResponseData {
+abstract class ApiAuthResponseData with _$ApiAuthResponseData {
   const factory ApiAuthResponseData({
     @JsonKey(name: 'access_token') String? accessToken,
     @JsonKey(name: 'id') int? id,

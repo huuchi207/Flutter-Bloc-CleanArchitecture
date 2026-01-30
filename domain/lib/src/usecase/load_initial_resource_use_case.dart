@@ -29,7 +29,7 @@ class LoadInitialResourceInput extends BaseInput with _$LoadInitialResourceInput
 }
 
 @freezed
-class LoadInitialResourceOutput extends BaseOutput with _$LoadInitialResourceOutput {
+abstract class LoadInitialResourceOutput extends BaseOutput with _$LoadInitialResourceOutput {
   const LoadInitialResourceOutput._();
 
   const factory LoadInitialResourceOutput({

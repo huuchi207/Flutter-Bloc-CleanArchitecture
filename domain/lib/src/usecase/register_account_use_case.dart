@@ -27,7 +27,7 @@ class RegisterAccountUseCase
 }
 
 @freezed
-class RegisterAccountInput extends BaseInput with _$RegisterAccountInput {
+abstract class RegisterAccountInput extends BaseInput with _$RegisterAccountInput {
   const RegisterAccountInput._();
 
   const factory RegisterAccountInput({

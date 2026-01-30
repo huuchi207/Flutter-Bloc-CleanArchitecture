@@ -40,7 +40,7 @@ class ResetPasswordUseCase extends BaseFutureUseCase<ResetPasswordInput, ResetPa
 }
 
 @freezed
-class ResetPasswordInput extends BaseInput with _$ResetPasswordInput {
+abstract class ResetPasswordInput extends BaseInput with _$ResetPasswordInput {
 
   const ResetPasswordInput._();
 

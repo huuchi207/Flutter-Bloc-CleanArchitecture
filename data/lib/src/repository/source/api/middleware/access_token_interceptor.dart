@@ -16,7 +16,7 @@ class AccessTokenInterceptor extends BaseInterceptor {
   @override
   Future<void> onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
     final token = await _appPreferences.accessToken;
-    if (token.isNotEmpty) {
+    if (token?.isNotEmpty == true) {
       options.headers[ServerRequestResponseConstants.basicAuthorization] =
           '${ServerRequestResponseConstants.bearer} $token';
     }

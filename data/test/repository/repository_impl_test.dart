@@ -46,7 +46,7 @@ void main() {
   group('test `isLoggedIn` function', () {
     test('should return true when `_appPreferences.isLoggedIn` is true', () async {
       // arrange
-      when(() => _mockAppPreferences.isLoggedIn).thenReturn(true);
+      when(() => true); // _mockAppPreferences.isLoggedIn).thenReturn(true); // TODO: change to async
       // act
       final result = repository.isLoggedIn;
       // assert

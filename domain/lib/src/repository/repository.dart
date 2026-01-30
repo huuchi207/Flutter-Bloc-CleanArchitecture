@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import '../../domain.dart';
 
 abstract class Repository {

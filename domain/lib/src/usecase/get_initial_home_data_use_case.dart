@@ -33,7 +33,7 @@ class GetInitialHomeDataInput extends BaseInput with _$GetInitialHomeDataInput {
 }
 
 @freezed
-class GetInitialHomeDataOutput extends BaseOutput with _$GetInitialHomeDataOutput {
+abstract class GetInitialHomeDataOutput extends BaseOutput with _$GetInitialHomeDataOutput {
   const GetInitialHomeDataOutput._();
 
   const factory GetInitialHomeDataOutput({

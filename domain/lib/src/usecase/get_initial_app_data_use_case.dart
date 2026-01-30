@@ -31,7 +31,7 @@ class GetInitialAppDataInput extends BaseInput with _$GetInitialAppDataInput {
 }
 
 @freezed
-class GetInitialAppDataOutput extends BaseOutput with _$GetInitialAppDataOutput {
+abstract class GetInitialAppDataOutput extends BaseOutput with _$GetInitialAppDataOutput {
   const GetInitialAppDataOutput._();
 
   const factory GetInitialAppDataOutput({

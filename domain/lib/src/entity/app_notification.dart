@@ -5,7 +5,7 @@ import '../../domain.dart';
 part 'app_notification.freezed.dart';
 
 @freezed
-class AppNotification with _$AppNotification {
+abstract class AppNotification with _$AppNotification {
   const factory AppNotification({
     @Default(AppNotification.defaultNotificationId) String notificationId,
     @Default(AppNotification.defaultNotificationType) NotificationType notificationType,

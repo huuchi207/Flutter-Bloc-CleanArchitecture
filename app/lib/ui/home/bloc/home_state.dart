@@ -7,7 +7,7 @@ import '../../../base/bloc/base_bloc_state.dart';
 part 'home_state.freezed.dart';
 
 @freezed
-class HomeState extends BaseBlocState with _$HomeState {
+abstract class HomeState extends BaseBlocState with _$HomeState {
   const HomeState._();
 
   factory HomeState({

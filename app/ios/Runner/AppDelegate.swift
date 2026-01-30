@@ -25,7 +25,5 @@ import Flutter
     
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
-    func open(_ url: URL, options: [OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {
-        
-    }
+
 }

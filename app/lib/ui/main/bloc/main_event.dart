@@ -9,7 +9,7 @@ abstract class MainEvent extends BaseBlocEvent {
 }
 
 @freezed
-class MainPageInitiated extends MainEvent with _$MainPageInitiated {
+abstract class MainPageInitiated extends MainEvent with _$MainPageInitiated {
   const MainPageInitiated._();
   const factory MainPageInitiated({
     required int id,

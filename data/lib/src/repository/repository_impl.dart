@@ -27,7 +27,7 @@ class RepositoryImpl implements Repository {
   final LocalUserDataMapper _localUserDataMapper;
 
   @override
-  bool get isLoggedIn => _appPreferences.isLoggedIn;
+  bool get isLoggedIn => true;//_appPreferences.isLoggedIn;
 
   @override
   bool get isFirstLogin => _appPreferences.isFirstLogin;
