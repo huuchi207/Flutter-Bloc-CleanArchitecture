@@ -1,3 +1,9 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
 def dartEnvironmentVariables = []
 if (project.hasProperty('dart-defines')) {
     dartEnvironmentVariables = project.property('dart-defines')
@@ -31,14 +37,12 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-
 android {
-    compileSdkVersion 33
+    namespace 'jp.flutter.app'
+    compileSdkVersion 36
 
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -54,7 +58,7 @@ android {
     defaultConfig {
         applicationId "jp.flutter.app"
         minSdkVersion 26
-        targetSdkVersion 33
+        targetSdkVersion 36
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -90,7 +94,7 @@ android {
             versionName = "1.0.1"
             applicationId "jp.flutter.app.dev"
             manifestPlaceholders["host"] = "dev.chatwork.com"
-            manifestPlaceholders["applicationName"] = "Develop"
+            manifestPlaceholders["applicationName"] = "android.app.Application"
             // manifestPlaceholders["apiKey"] = dartEnvironmentVariables.API_KEY
             // manifestPlaceholders["apiSecret"] = dartEnvironmentVariables.API_SECRET
             // buildConfigField "String", "API_KEY", "\"${dartEnvironmentVariables.API_KEY}\""
@@ -103,7 +107,7 @@ android {
             versionName = "1.0.1"
             applicationId "jp.flutter.app.qa"
             manifestPlaceholders["host"] = "dev.chatwork.com"
-            manifestPlaceholders["applicationName"] = "Qa"
+            manifestPlaceholders["applicationName"] = "android.app.Application"
             // manifestPlaceholders["apiKey"] = dartEnvironmentVariables.API_KEY
             // manifestPlaceholders["apiSecret"] = dartEnvironmentVariables.API_SECRET
             // buildConfigField "String", "API_KEY", "\"${dartEnvironmentVariables.API_KEY}\""
@@ -116,7 +120,7 @@ android {
             versionName = "1.0.3"
             applicationId "jp.flutter.app.stg"
             manifestPlaceholders["host"] = "stg.facebook.com"
-            manifestPlaceholders["applicationName"] = "Staging"
+            manifestPlaceholders["applicationName"] = "android.app.Application"
             // manifestPlaceholders["apiKey"] = dartEnvironmentVariables.API_KEY
             // manifestPlaceholders["apiSecret"] = dartEnvironmentVariables.API_SECRET
             // buildConfigField(
@@ -137,7 +141,7 @@ android {
             versionName = "1.0.0"
             applicationId "jp.flutter.app"
             manifestPlaceholders["host"] = "chatwork.com"
-            manifestPlaceholders["applicationName"] = "Production"
+            manifestPlaceholders["applicationName"] = "android.app.Application"
             // manifestPlaceholders["apiKey"] = dartEnvironmentVariables.API_KEY
             // manifestPlaceholders["apiSecret"] = dartEnvironmentVariables.API_SECRET
             // buildConfigField(
@@ -159,5 +163,6 @@ flutter {
 }
 
 dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
