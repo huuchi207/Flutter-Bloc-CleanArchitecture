@@ -25,36 +25,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends BasePageState<MainPage, MainBloc> {
   final _bottomBarKey = GlobalKey();
 
-  openBankDeepLink(String deepLink) async {
-    if (Platform.isAndroid) {
-      final intent = AndroidIntent(
-        action: 'android.intent.action.VIEW',
-        data: deepLink,
-        flags: <int>[
-          Flag.FLAG_ACTIVITY_NEW_TASK,
-        ],
-      );
-
-      intent.launch();
-    } else {
-      final ok = await launchUrl(Uri.parse(deepLink), mode: LaunchMode.externalApplication);
-      if (!ok && context.mounted) {
-        showDialog(
-          context: context,
-          builder: (_) => const AlertDialog(
-            title: Text('Không mở được'),
-            content: Text('Có thể bạn chưa cài app ngân hàng hoặc deeplink không hợp lệ.'),
-          ),
-        );
-      }
-    }
-
-  }
   @override
   Widget buildPage(BuildContext context) {
-    openBankDeepLink(
-      'vietinbankmobile://00020101021226330010A00000077501150100109106478GT5204581253037045405145005802VN5902VT6003HCM62650316VIETTELCN%20CTT222051901260129203748791970708VIET05070806maybtn6304ED4F?callbackurl=https%3A%2F%2Fwww.google.com%2F',
-    );
 
     return AutoTabsScaffold(
       routes: (navigator as AppNavigatorImpl).tabRoutes,

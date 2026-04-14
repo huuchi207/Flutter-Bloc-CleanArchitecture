@@ -1,6 +1,4 @@
 analyzer:
-  plugins:
-    - custom_lint
   exclude:
     - "**/*.g.dart"
     - "**/*.graphql.dart"
@@ -19,12 +17,6 @@ analyzer:
   errors:
     unused_import: warning
     # invalid_annotation_target: ignore
-
-custom_lint:
-  rules:
-    - lines_longer_than_100_chars: false
-    - incorrect_todo_comment: false
-    - prefer_named_parameters: false
 
 linter:
   rules:

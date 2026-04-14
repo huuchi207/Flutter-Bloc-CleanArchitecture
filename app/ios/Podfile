@@ -37,5 +37,15 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
+    if target.name == 'connectivity_plus'
+      target.source_build_phase.files.each do |file|
+        if file.file_ref && file.file_ref.path && file.file_ref.path.include?('PathMonitorConnectivityProvider.swift')
+          path = file.file_ref.real_path.to_s
+          text = File.read(path)
+          text = text.gsub('if #available(iOS 26.0, *), path.isUltraConstrained {', 'if false {')
+          File.open(path, "w") { |file| file.puts text }
+        end
+      end
+    end
   end
 end

@@ -9,7 +9,3 @@ analyzer:
     - "**/*.config.dart"
     - "**/*.gen.dart"
     # - "test/*.dart"
-
-custom_lint:
-  rules:
-    - missing_run_bloc_catching: false

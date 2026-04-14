@@ -1,14 +1,9 @@
 name: nals_lints
-description: A new Flutter package project.
+description: Custom lint rules (disabled - custom_lint incompatible with analyzer 10.x)
 version: 0.0.1
 publish_to: none
 
 environment:
   sdk: '>=3.8.0 <4.0.0'
 
-dependency_overrides:
-  analyzer: 8.1.1
-
-dependencies:
-  custom_lint_builder: 0.8.1
-  source_gen: 4.2.0
+dependencies: {}
